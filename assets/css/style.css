@@ -427,20 +427,20 @@ body {
 
 /* AGENDA */
 
-.agenda img {
+.agenda-home img {
   height: 180px;
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .agenda img {
+  .agenda-home img {
     height: 155px !important;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  .agenda img {
+  .agenda-home img {
     height: 202px !important;
   }
 }
@@ -848,7 +848,88 @@ li.slick-active {
     text-decoration: none;
     margin-top: 2px;
 }
+.blog .entry .entry-meta a:hover {
+    color: #0d6efd;
+}
 
 .blog .entry .entry-meta ul li + li {
+    padding-left: 20px;
+}
+
+
+
+/* BLOG AGENDA */
+
+
+.agenda .entry img {
+  height: 150px;
+  margin-top: 16px;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .agenda .entry .card-body {
+    margin-left: -16px ;
+  }
+  .agenda .entry img {
+    height: 200px !important;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .agenda .entry img {
+    height: 155px !important;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .agenda .entry img {
+    height: 150px !important;
+  }
+}
+
+.agenda .entry .entry-title a {
+    color: #212529;
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.agenda .entry .entry-title a:hover {
+    color: #0d6efd;
+}
+
+.agenda .entry .entry-meta {
+    margin-top: 32px;
+}
+
+.agenda .entry .entry-meta ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.agenda .entry .entry-meta i {
+    font-size: 16px;
+    margin-right: 8px;
+    line-height: 0;
+}
+
+.agenda .entry .entry-meta a {
+    color: #777777;
+    font-size: 14px;
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+    margin-top: 2px;
+}
+
+.agenda .entry .entry-meta ul li + li {
     padding-left: 20px;
 }
