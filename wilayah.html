@@ -34,7 +34,7 @@
 	<!-- Icon -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
-	<title>Struktur Organisasi - Desa Alang Alang</title>
+	<title>Demografis Wilayah - Desa Alang Alang</title>
 </head>
 
 <body>
@@ -78,7 +78,7 @@
 						<nav id="navbar" class="navbar navbar-expand-lg navbar-light">
 							<ul class="navbar-nav mt-2 mt-md-auto">
 								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+									<a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
 										data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 										Profil Desa
 									</a>
@@ -86,10 +86,10 @@
 										<a class="dropdown-item" href="sejarah.html">
 											Sejarah
 										</a>
-										<a class="dropdown-item" href="visimisi.html">
+										<a class="dropdown-item active" href="visimisi.html">
 											Visi Dan Misi
 										</a>
-										<a class="dropdown-item active" href="organisasi.html">
+										<a class="dropdown-item" href="organisasi.html">
 											Struktur Organisasi
 										</a>
 									</div>
@@ -100,7 +100,7 @@
 										Demografis Desa
 									</a>
 									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<a class="dropdown-item" href="wilayah.html">
+										<a class="dropdown-item active" href="wilayah.html">
 											Demografis Wilayah
 										</a>
 										<a class="dropdown-item" href="penduduk.html">
@@ -160,114 +160,367 @@
 	<!-- End Header  -->
 
 	<!-- Start Breadcrumb -->
-	<div class="breadcrumb-area overlay dark bg-fixed text-center text-light"
-		style="background-image: url(https://desa-manguntara-indramayu.s3-id-jkt-1.kilatstorage.id/header-image.jpg); height: 350px; background-repeat: no-repeat; background-position: top; background-size: 1667px 560px;">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12">
-					<h1>Struktur Organisasi</h1>
-					<nav aria-label="breadcrumb">
-						<ol class="breadcrumb d-flex justify-content-center">
-							<li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Struktur Organisasi</li>
-						</ol>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Breadcrumb -->
-
-	<!-- Start Content  -->
-	<section class="py-5 bg-light">
-		<div class="container py-3">
-			<div class="row g-4 my-2">
-				<div class="col-md-3">
-					<div class="card bg-white shadow-sm rounded border-0 px-3 py-3">
-						<img src="assets/img/logo.png" class="img-fluid mx-auto" alt="image">
-					</div>
-				</div>
-				<div class="col-md-9">
-					<div class="card bg-white shadow-sm rounded border-0 px-3 py-3">
-						<h4>Kepala Desa</h4>
-						<div class="table-responsive mt-3">
-							<table class="table table-bordered table-hover">
-								<tbody>
-									<tr>
-										<td>Jabatan</td>
-										<td>Kepala Desa</td>
-									</tr>
-									<tr>
-										<td>Alamat</td>
-										<td>Alang Alang</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row g-4 my-2">
-				<div class="col-lg-6">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="card bg-white shadow-sm rounded border-0 px-3 py-3">
-								<img src="assets/img/logo.png" class="img-fluid mx-auto" alt="image">
-							</div>
-						</div>
-						<div class="col-md-9">
-							<div class="card bg-white shadow-sm rounded border-0 px-3 py-3">
-								<h4>Sekretaris Desa</h4>
-								<div class="table-responsive mt-3">
-									<table class="table table-bordered table-hover">
-										<tbody>
-											<tr>
-												<td>Jabatan</td>
-												<td>Sekretaris Desa</td>
-											</tr>
-											<tr>
-												<td>Alamat</td>
-												<td>Alang Alang</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="card bg-white shadow-sm rounded border-0 px-3 py-3">
-								<img src="assets/img/logo.png" class="img-fluid mx-auto" alt="image">
-							</div>
-						</div>
-						<div class="col-md-9">
-							<div class="card bg-white shadow-sm rounded border-0 px-3 py-3">
-								<h4>Bendahara Desa</h4>
-								<div class="table-responsive mt-3">
-									<table class="table table-bordered table-hover">
-										<tbody>
-											<tr>
-												<td>Jabatan</td>
-												<td>Bendahara Desa</td>
-											</tr>
-											<tr>
-												<td>Alamat</td>
-												<td>Alang Alang</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+	<section class="breadcrumbs bg-light pt-4 py-3 shadow-sm">
+		<div class="container px-3">
+			<div class="d-flex justify-content-between align-items-center">
+				<h2>Demografis</h2>
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb d-flex justify-content-center">
+						<li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Demografis</li>
+					</ol>
+				</nav>
 			</div>
 		</div>
 	</section>
-	<!-- End Content  -->
+	<!-- End Breadcrumb -->
+
+	<!-- Start chart  -->
+	<section class="">
+		<div class="container py-3">
+			<!-- Start Chart Jenis Kelamin  -->
+			<div class="card border-0 rounded shadow my-5">
+				<div class="card-header py-3">
+					<h5 class="m-0 font-weight-bold">Demografi Berdasarkan Jenis Kelamin</h5>
+				</div>
+				<div class="card-body">
+					<h5>Grafik Data</h5>
+					<div class="col-md-4 mx-auto">
+						<canvas id="chart-jenis-kelamin"></canvas>
+					</div>
+
+					<h5 class="mt-5">Tabel Data</h5>
+					<div class="table-responsive mt-3">
+						<table class="table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>Kelompok</th>
+									<th>Jumlah</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>Laki Laki</td>
+									<td>1000</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Perempuan</td>
+									<td>2000</td>
+								</tr>
+								<tr>
+									<td colspan="2" class="text-center fw-bold">Jumlah</td>
+									<td>3000</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- End Chart Jenis Kelamin  -->
+
+			<!-- Start Chart Pendidikan  -->
+			<div class="card border-0 rounded shadow my-5">
+				<div class="card-header py-3">
+					<h5 class="m-0 font-weight-bold">Demografi Berdasarkan Pendidikan</h5>
+				</div>
+				<div class="card-body">
+					<h5>Grafik Data</h5>
+					<div class="col-md-4 mx-auto">
+						<canvas id="chart-pendidikan"></canvas>
+					</div>
+
+					<h5 class="mt-5">Tabel Data</h5>
+					<div class="table-responsive mt-3">
+						<table class="table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>Kelompok</th>
+									<th>Jumlah</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>Tidak / Belum Sekolah</td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Tamat SD</td>
+									<td>20</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Tamat SMP</td>
+									<td>30</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>Tamat SMA / SMK</td>
+									<td>40</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>Tamat Diploma</td>
+									<td>50</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td>Tamat Sarjana</td>
+									<td>60</td>
+								</tr>
+								<tr>
+									<td colspan="2" class="text-center fw-bold">Jumlah</td>
+									<td>210</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- End Chart Pendidikan  -->
+
+			<!-- Start Chart Pekerjaan -->
+			<div class="card border-0 rounded shadow my-5">
+				<div class="card-header py-3">
+					<h5 class="m-0 font-weight-bold">Demografi Berdasarkan Pekerjaan</h5>
+				</div>
+				<div class="card-body">
+					<h5>Grafik Data</h5>
+					<div class="col-md-4 mx-auto">
+						<canvas id="chart-pekerjaan"></canvas>
+					</div>
+			
+					<h5 class="mt-5">Tabel Data</h5>
+					<div class="table-responsive mt-3">
+						<table class="table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>Kelompok</th>
+									<th>Jumlah</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>Belum / Tidak Bekerja</td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Pelajar / Mahasiswa</td>
+									<td>20</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Pegawai Negeri Sipil</td>
+									<td>30</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>Tentara Nasional Indonesia (TNI)</td>
+									<td>40</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>Petani</td>
+									<td>50</td>
+								</tr>
+								<tr>
+									<td colspan="2" class="text-center fw-bold">Jumlah</td>
+									<td>150</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- End Chart Pekerjaan -->
+
+			<!-- Start Chart Agama-->
+			<div class="card border-0 rounded shadow my-5">
+				<div class="card-header py-3">
+					<h5 class="m-0 font-weight-bold">Demografi Berdasarkan Agama</h5>
+				</div>
+				<div class="card-body">
+					<h5>Grafik Data</h5>
+					<div class="col-md-4 mx-auto">
+						<canvas id="chart-agama"></canvas>
+					</div>
+			
+					<h5 class="mt-5">Tabel Data</h5>
+					<div class="table-responsive mt-3">
+						<table class="table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>Kelompok</th>
+									<th>Jumlah</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>Islam</td>
+									<td>60</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Kristen</td>
+									<td>50</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Katolik</td>
+									<td>40</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>Hindu</td>
+									<td>30</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>Budha</td>
+									<td>20</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>Khonghucu</td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td colspan="2" class="text-center fw-bold">Jumlah</td>
+									<td>210</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- End Chart Agama-->
+
+			<!-- Start Chart Status -->
+			<div class="card border-0 rounded shadow my-5">
+				<div class="card-header py-3">
+					<h5 class="m-0 font-weight-bold">Demografi Berdasarkan Status</h5>
+				</div>
+				<div class="card-body">
+					<h5>Grafik Data</h5>
+					<div class="col-md-4 mx-auto">
+						<canvas id="chart-status"></canvas>
+					</div>
+			
+					<h5 class="mt-5">Tabel Data</h5>
+					<div class="table-responsive mt-3">
+						<table class="table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>Kelompok</th>
+									<th>Jumlah</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>Belum Menikah</td>
+									<td>60</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Menikah</td>
+									<td>50</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Bercerai</td>
+									<td>40</td>
+								</tr>
+								<tr>
+									<td colspan="2" class="text-center fw-bold">Jumlah</td>
+									<td>150</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- End Chart Status -->
+
+			<!-- Start Chart Usia-->
+			<div class="card border-0 rounded shadow my-5">
+				<div class="card-header py-3">
+					<h5 class="m-0 font-weight-bold">Demografi Berdasarkan Usia</h5>
+				</div>
+				<div class="card-body">
+					<h5>Grafik Data</h5>
+					<div class="col-md-6 mx-auto">
+						<canvas id="chart-usia"></canvas>
+					</div>
+			
+					<h5 class="mt-5">Tabel Data</h5>
+					<div class="table-responsive mt-3">
+						<table class="table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>Kelompok</th>
+									<th>Jumlah</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>< 10 Tahun</td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>11 - 20 Tahun</td>
+									<td>20</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>21 - 30 Tahun</td>
+									<td>30</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>31 - 40 Tahun</td>
+									<td>40</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>41 - 50 Tahun</td>
+									<td>50</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td>> 50 Tahun</td>
+									<td>60</td>
+								</tr>
+								<tr>
+									<td colspan="2" class="text-center fw-bold">Jumlah</td>
+									<td>210</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- End Chart Usia-->
+
+			<!-- Start Chart -->
+			<!-- End Chart -->
+		</div>
+	</section>
+	<!-- End Welcome  -->
 
 	<!-- Start Footer -->
 	<footer class="bg-dark text-white">
@@ -375,6 +628,11 @@
   	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   	-->
 
+	<!-- Chart JS  -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"
+		integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 	<!-- Custom JS -->
 	<script src="assets/js/main.js"></script>
 
@@ -384,6 +642,23 @@
 		AOS.init();
 	</script>
 
+	<!-- Data Jenis Kelamin  -->
+	<script src="assets/js/chart/jenis.kelamin.js"></script>
+
+	<!-- Data Pendidikan  -->
+	<script src="assets/js/chart/pendidikan.js"></script>
+
+	<!-- Data pekerjaan  -->
+	<script src="assets/js/chart/pekerjaan.js"></script>
+
+	<!-- Data agama  -->
+	<script src="assets/js/chart/agama.js"></script>
+
+	<!-- Data status  -->
+	<script src="assets/js/chart/status.js"></script>
+
+	<!-- Data usia  -->
+	<script src="assets/js/chart/usia.js"></script>
 </body>
 
 </html>

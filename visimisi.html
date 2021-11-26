@@ -22,10 +22,9 @@
 
 	<!-- Animate on Scroll -->
 	<link rel="stylesheet" href="assets/css/aos.css">
-	<link rel="stylesheet" href="assets/css/style.css">
 
-	<!-- For Gallery  -->
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<!-- Custom CSS  -->
+	<link rel="stylesheet" href="assets/css/style.css">
 
 	<!-- Font Family -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,7 +104,7 @@
 											Demografis Wilayah
 										</a>
 										<a class="dropdown-item" href="penduduk.html">
-											Demografi Penduduk
+											Demografis Penduduk
 										</a>
 										<a class="dropdown-item" href="ibadah.html">
 											Sarana Ibadah
@@ -179,7 +178,7 @@
 	</div>
 	<!-- End Breadcrumb -->
 
-	<!-- Start Welcome  -->
+	<!-- Start Content  -->
 	<section class="py-5 bg-light">
 		<div class="container py-3">
 			<div class="row g-4">
@@ -284,7 +283,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- End Welcome  -->
+	<!-- End Content  -->
 
 	<!-- Start Footer -->
 	<footer class="bg-dark text-white">
@@ -399,36 +398,6 @@
 	<script src="assets/js/aos.js"></script>
 	<script>
 		AOS.init();
-	</script>
-
-	<!-- For Gallery  -->
-	<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
-	<script src="assets/js/jquery.min.js"></script>
-
-	<!-- Magnific Popup core JS file -->
-	<script src="assets/js/jquery.magnific-popup.min.js"></script>
-
-	<!-- Magnific Popup Gallery -->
-	<script>
-		$(document).ready(function () {
-			$('.popup-gallery').magnificPopup({
-				delegate: 'a',
-				type: 'image',
-				tLoading: 'Loading image #%curr%...',
-				mainClass: 'mfp-img-mobile',
-				gallery: {
-					enabled: true,
-					navigateByImgClick: true,
-					preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-				},
-				image: {
-					tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-					titleSrc: function (item) {
-						return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
-					}
-				}
-			});
-		});
 	</script>
 
 </body>
