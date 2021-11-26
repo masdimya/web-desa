@@ -68,10 +68,21 @@ body {
   font-size: 16px !important;
 }
 
+.bg-grey {
+  background-color: #f5f5f5;
+}
+
+.bg-grey-2 {
+  background-color: #f1f1f1;
+}
+
 .shadow-custom {
   box-shadow: 0 4px 16px rgb(0 0 0 / 10%);
 }
 
+.text-subtitle {
+  font-size: 18px;
+}
 /* HEADER  */
 
 .main_menu {
@@ -409,12 +420,20 @@ body {
 
 .statistic .card:hover {
   transform: scale(1.02);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
+  transition: transform 1s ease-in-out; 
+}
+
+.statistic .stretched-link {
+  color: #212529;
+  text-decoration: none;
+}
+.statistic .stretched-link:hover {
+  color: #0d6efd;
   transition: transform 1s ease-in-out; 
 }
 
 .masthead-followup-icon {
-  width: 50%;
+  width: 40%;
   padding: 0.75rem;
   background-image: linear-gradient(
     to bottom right,
@@ -428,7 +447,7 @@ body {
 /* AGENDA */
 
 .agenda-home img {
-  height: 180px;
+  height: 176px;
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -684,10 +703,6 @@ li.slick-active {
 
 .breadcrumb-item {
   font-size: 18px;
-}
-
-.breadcrumb-item.active {
-  color: #cccccc;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
