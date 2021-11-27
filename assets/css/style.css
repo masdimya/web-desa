@@ -1,46 +1,26 @@
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .carousel-caption h1 {
-    font-size: 28px !important;
-  }
 
-  .carousel-caption {
-    bottom: 4em !important;
-  }
-
-  .carousel-text {
-    font-size: 16px !important;
-  }
-
-  .carousel-item img {
-    height: 400px !important;
-  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .carousel-caption h1 {
-    font-size: 32px !important;
-  }
 
-  .carousel-caption {
-    bottom: 8em !important;
-  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .carousel-caption {
-    bottom: 8em !important;
-  }
+
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+
 }
 
 body {
@@ -370,6 +350,50 @@ body {
   max-height: 650px;
 }
 
+@media (max-width: 575.98px) {
+  .carousel-caption h1 {
+    font-size: 28px !important;
+  }
+
+  .carousel-caption {
+    bottom: 4em !important;
+  }
+
+  .carousel-text {
+    font-size: 16px !important;
+  }
+
+  .carousel-item img {
+    height: 400px !important;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .carousel-caption h1 {
+    font-size: 32px !important;
+  }
+
+  .carousel-caption {
+    bottom: 8em !important;
+  }
+
+  .carousel-item img {
+    height: 500px !important;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .carousel-caption {
+    bottom: 8em !important;
+  }
+
+  .carousel-item img {
+    height: 500px !important;
+  }
+}
+
 .carousel-overlay {
   position: absolute;
   top: 0;
@@ -575,8 +599,14 @@ body {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .slick-prev,
-  .slick-next {
+  .slick-prev, .slick-next {
+    display: none !important;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .slick-prev, .slick-next {
     display: none !important;
   }
 }
