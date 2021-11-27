@@ -180,6 +180,11 @@ body {
   background-color: #0d6efd;
 }
 
+.navbar .nav-link.active {
+  transition: 0.5;
+  color: #0d6efd !important;
+}
+
 .navbar .nav-item {
   transition: 0.5;
   border-bottom: 2px solid #ffffff00;
@@ -1044,6 +1049,12 @@ li.slick-active {
   margin-right: 0;
 }
 
+
+/* PRODUK  */
+
+.produk img {
+  height: 200px;
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
