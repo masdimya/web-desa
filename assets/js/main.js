@@ -65,6 +65,39 @@ function backToTop() {
   };
 
   /**
+   * Porfolio isotope and filter
+   */
+  window.addEventListener("load", () => {
+    let galeriContainer = select(".galeri-foto-container");
+    if (galeriContainer) {
+      let galeriIsotope = new Isotope(galeriContainer, {
+        itemSelector: ".galeri-item",
+        layoutMode: "fitRows",
+      });
+
+      let galeriFilters = select("#galeri-foto-filters li", true);
+
+      on(
+        "click",
+        "#galeri-foto-filters li",
+        function (e) {
+          e.preventDefault();
+          galeriFilters.forEach(function (el) {
+            el.classList.remove("filter-active");
+          });
+          this.classList.add("filter-active");
+
+          galeriIsotope.arrange({
+            filter: this.getAttribute("data-filter"),
+          });
+          aos_init();
+        },
+        true
+      );
+    }
+  });
+
+  /**
    * Scrolls to an element with header offset
    */
   // const scrollto = (el) => {
