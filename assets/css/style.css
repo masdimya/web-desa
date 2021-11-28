@@ -58,6 +58,7 @@ body {
 .text-subtitle {
   font-size: 18px;
 }
+
 /* HEADER  */
 
 .main_menu {
@@ -109,6 +110,13 @@ body {
   font-weight: 500;
   white-space: nowrap;
   transition: 0.3s;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar a {
+    padding: 10px !important;
+  }
 }
 
 .navbar a i,
@@ -280,7 +288,7 @@ body {
 .navbar-mobile ul {
   display: block;
   position: absolute;
-  top: 45px;
+  top: 50px;
   right: 15px;
   bottom: 45px;
   left: 15px;
@@ -1040,7 +1048,8 @@ li.slick-active {
   border: 1px solid #fff;
 }
 
-.galeri-foto #galeri-foto-filters li:hover, .galeri-foto #galeri-foto-filters li.filter-active {
+.galeri-foto #galeri-foto-filters li:hover,
+.galeri-foto #galeri-foto-filters li.filter-active {
   color: #0d6efd;
   border-color: #0d6efd;
 }
@@ -1048,7 +1057,6 @@ li.slick-active {
 .galeri-foto #galeri-foto-filters li:last-child {
   margin-right: 0;
 }
-
 
 /* PRODUK  */
 
@@ -1059,44 +1067,44 @@ li.slick-active {
 # Preloader
 --------------------------------------------------------------*/
 #preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.562);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.562);
 }
 
 #preloader:before {
-    content: "";
-    position: fixed;
-    top: calc(50% - 30px);
-    left: calc(50% - 30px);
-    border: 5px solid #0d6efd;
-    border-top-color: #fff;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    -webkit-animation: animate-preloader 1s linear infinite;
-    animation: animate-preloader 1s linear infinite;
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 5px solid #0d6efd;
+  border-top-color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
 }
 
 @-webkit-keyframes animate-preloader {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes animate-preloader {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
