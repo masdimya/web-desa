@@ -181,63 +181,125 @@
 			<!-- Start Chart Wilayah -->
 			<div class="card border-0 rounded shadow my-5">
 				<div class="card-header py-3">
-					<h5 class="m-0 font-weight-bold">Demografi Berdasarkan Jenis Kelamin</h5>
+					<h5 class="m-0 font-weight-bold">LAPORAN REALISASI PELAKSANAAN
+					DANA DESA TAHUN 2021</h5>
 				</div>
 				<div class="card-body">
-					<h5>Grafik Data</h5>
-					<div class="col-md-6 mx-auto">
-						<canvas id="chart-wilayah"></canvas>
+					<h5 class="mb-4">Grafik Data</h5>
+					<div class="row g-5 align-items-center">
+						<div class="col-md-7 mx-auto">
+							<canvas id="chart-dana-desa"></canvas>
+						</div>
+						<div class="col-md-5 mx-auto">
+							<canvas id="chart-dana-desa-circle"></canvas>
+						</div>
 					</div>
 			
 					<h5 class="mt-5">Tabel Data</h5>
 					<div class="table-responsive mt-3">
-						<table class="table table-bordered table-hover text-center">
+						<table class="table table-bordered table-hover">
 							<thead>
 								<tr>
-									<th>No</th>
-									<th>Nama Dusun</th>
-									<th>Jumlah RT</th>
-									<th>Jumlah KK</th>
-									<th>Jiwa</th>
-									<th>Laki-Laki</th>
-									<th>Perempuan</th>
+									<th>Uraian</th>
+									<th>Anggaran (Rp.)</th>
+									<th>Realisasi (Rp.)</th>
+									<th>Lebih/Kurang (Rp.)</th>
+									<th>Persentase (%)</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>1</td>
-									<td>Dusun A</td>
-									<td>5</td>
-									<td>50</td>
-									<td>5000</td>
-									<td>500</td>
-									<td>500</td>
+									<td class="fw-bold">PENDAPATAN</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
 								</tr>
 								<tr>
-									<td>2</td>
-									<td>Dusun B</td>
-									<td>6</td>
-									<td>60</td>
-									<td>6000</td>
-									<td>600</td>
-									<td>600</td>
+									<td>Dana Desa</td>
+									<td>10.500.000</td>
+									<td>10.000.000</td>
+									<td>500.000</td>
+									<td>54.0</td>
+								</tr>
+								<tr class="fw-bold">
+									<td>JUMLAH PENDAPATAN</td>
+									<td>10.500.000</td>
+									<td>10.000.000</td>
+									<td>500.000</td>
+									<td>54.0</td>
 								</tr>
 								<tr>
-									<td>3</td>
-									<td>Dusun C</td>
-									<td>7</td>
-									<td>70</td>
-									<td>7000</td>
-									<td>700</td>
-									<td>700</td>
+									<td colspan="5"></td>
 								</tr>
 								<tr>
-									<td colspan="2" class="text-center fw-bold">Jumlah</td>
-									<td>18</td>
-									<td>180</td>
-									<td>18000</td>
-									<td>1800</td>
-									<td>1800</td>
+									<td class="fw-bold">BELANJA</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Bidang Pelaksanaan Pembangunan Desa</td>
+									<td>1.100.000</td>
+									<td>1.000.000</td>
+									<td>100.000</td>
+									<td>50.0</td>
+								</tr>
+								<tr>
+									<td>Bidang Pemberdayaan Masyarakat</td>
+									<td>2.100.000</td>
+									<td>2.000.000</td>
+									<td>100.000</td>
+									<td>50.0</td>
+								</tr>
+								<tr>
+									<td>Bidang Penanggulangan Bencana Desa</td>
+									<td>3.100.000</td>
+									<td>3.000.000</td>
+									<td>100.000</td>
+									<td>50.0</td>
+								</tr>
+								<tr class="fw-bold">
+									<td>JUMLAH BELANJA</td>
+									<td>6.300.000</td>
+									<td>6.000.000</td>
+									<td>300.000</td>
+									<td>54.0</td>
+								</tr>
+								<tr>
+									<td colspan="5"></td>
+								</tr>
+								<tr>
+									<td class="fw-bold">PEMBIAYAAN</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Pengeluaran Pembiayaan</td>
+									<td>4.100.000</td>
+									<td>4.000.000</td>
+									<td>100.000</td>
+									<td>50.0</td>
+								</tr>
+								<tr class="fw-bold">
+									<td>JUMLAH PEMBIAYAAN</td>
+									<td>4.100.000</td>
+									<td>4.000.000</td>
+									<td>100.000</td>
+									<td>54.0</td>
+								</tr>
+								<tr>
+									<td colspan="5"></td>
+								</tr>
+								<tr class="fw-bold">
+									<td>PENDAPATAN - BELANJA - PEMBIAYAAN</td>
+									<td>10.400.000</td>
+									<td>10.000.000</td>
+									<td>400.000</td>
+									<td>54.0</td>
 								</tr>
 							</tbody>
 						</table>
@@ -371,7 +433,7 @@
 	</script>
 
 	<!-- Data wilayah  -->
-	<script src="assets/js/chart/wilayah.js"></script>
+	<script src="assets/js/chart/danadesa.js"></script>
 </body>
 
 </html>
