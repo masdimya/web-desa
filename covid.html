@@ -34,6 +34,9 @@
 	<!-- Icon -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
+	<!-- jQuery -->
+	<script src="http://covid19.bangkalankab.go.id/vendor/front/plugins/jQuery/jquery.min.js"></script>
+
 	<title>Dana Desa - Desa Alang Alang</title>
 </head>
 
@@ -187,52 +190,6 @@
 		<div class="container pb-3">
 			<h4>Statistik Covid-19</h4>
 			<h6 class="text-dark-secondary">Update Tanggal 28 November 2021</h6>
-			<div class="row g-4 my-2">
-				<div class="col-sm-6 col-md-3">
-					<div class="card shadow-sm rounded px-3 py-3 border-primary">
-						<h5 class="mb-4">Konfirmasi</h5>
-						<h6>Kabupaten</h6>
-						<h5 class="text-primary fw-bold mb-0">10</h5>
-						<hr>
-						<h6>Kecamatan</h6>
-						<h5 class="text-primary fw-bold mb-0">10 <span
-								class="badge rounded-pill bg-primary text-15">20</span></h5>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-3">
-					<div class="card shadow-sm rounded px-3 py-3 border-warning">
-						<h5 class="mb-4">Aktif</h5>
-						<h6>Kabupaten</h6>
-						<h5 class="text-warning fw-bold mb-0">10</h5>
-						<hr>
-						<h6>Kecamatan</h6>
-						<h5 class="text-warning fw-bold mb-0">10 <span
-								class="badge rounded-pill bg-warning text-15">20</span></h5>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-3">
-					<div class="card shadow-sm rounded px-3 py-3 border-success">
-						<h5 class="mb-4">Sembuh</h5>
-						<h6>Kabupaten</h6>
-						<h5 class="text-success fw-bold mb-0">10</h5>
-						<hr>
-						<h6>Kecamatan</h6>
-						<h5 class="text-success fw-bold mb-0">10 <span
-								class="badge rounded-pill bg-success text-15">20</span></h5>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-3">
-					<div class="card shadow-sm rounded px-3 py-3 border-danger">
-						<h5 class="mb-4">Meninggal</h5>
-						<h6>Kabupaten</h6>
-						<h5 class="text-danger fw-bold mb-0">10</h5>
-						<hr>
-						<h6>Kecamatan</h6>
-						<h5 class="text-danger fw-bold mb-0">10 <span
-								class="badge rounded-pill bg-danger text-15">20</span></h5>
-					</div>
-				</div>
-			</div>
 
 			<div class="row g-4 my-2">
 				<div class="col-sm-6 col-md-3">
@@ -269,7 +226,7 @@
 				</div>
 			</div>
 
-			<div class="row g-4 my-2">
+			<!-- <div class="row g-4 my-2">
 				<div class="col-sm-6 col-md-3">
 					<div class="card text-white bg-primary mb-3">
 						<div class="card-header">
@@ -314,75 +271,102 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
-			<h4 class="mt-5">Tentang Covid-19</h4>
+			<h4 class="mt-5 mb-4">Tentang Covid-19</h4>
 			<div class="card rounded-3 shadow-sm my-3">
+				<div id="info-box"></div>
 				<div class="row">
-					<div class="col-md-4 pt-4 px-4 bg-grey">
-						<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-							<button class="nav-link active text-start" id="v-pills-apa-tab" data-bs-toggle="pill" data-bs-target="#v-pills-apa"
-								type="button" role="tab" aria-controls="v-pills-apa" aria-selected="true">Apa itu Covid-19 ?</button>
-							<button class="nav-link text-start" id="v-pills-bagaimana-tab" data-bs-toggle="pill" data-bs-target="#v-pills-bagaimana"
-								type="button" role="tab" aria-controls="v-pills-bagaimana" aria-selected="true">Bagaimana Covid-19 Menular ?</button>
-							<button class="nav-link text-start" id="v-pills-gejala-tab" data-bs-toggle="pill" data-bs-target="#v-pills-gejala"
-								type="button" role="tab" aria-controls="v-pills-gejala" aria-selected="true">Apa Saja Gejala Covid-19 ?</button>
-							<button class="nav-link text-start" id="v-pills-mencegah-tab" data-bs-toggle="pill" data-bs-target="#v-pills-mencegah"
-								type="button" role="tab" aria-controls="v-pills-mencegah" aria-selected="true">Bagaimana Mencegah Penyebaran Covid-19 ?</button>
+					<div class="col-md-4">
+						<div class="py-4 px-4">
+							<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+								aria-orientation="vertical">
+								<button class="nav-link active text-start" id="v-pills-apa-tab" data-bs-toggle="pill"
+									data-bs-target="#v-pills-apa" type="button" role="tab" aria-controls="v-pills-apa"
+									aria-selected="true">Apa itu Covid-19 ?</button>
+								<button class="nav-link text-start" id="v-pills-bagaimana-tab" data-bs-toggle="pill"
+									data-bs-target="#v-pills-bagaimana" type="button" role="tab"
+									aria-controls="v-pills-bagaimana" aria-selected="true">Bagaimana Covid-19 Menular
+									?</button>
+								<button class="nav-link text-start" id="v-pills-gejala-tab" data-bs-toggle="pill"
+									data-bs-target="#v-pills-gejala" type="button" role="tab"
+									aria-controls="v-pills-gejala" aria-selected="true">Apa Saja Gejala Covid-19
+									?</button>
+								<button class="nav-link text-start" id="v-pills-mencegah-tab" data-bs-toggle="pill"
+									data-bs-target="#v-pills-mencegah" type="button" role="tab"
+									aria-controls="v-pills-mencegah" aria-selected="true">Bagaimana Mencegah Penyebaran
+									Covid-19 ?</button>
+							</div>
 						</div>
 					</div>
 					<div class="col-md-8 pt-4 px-4">
 						<div class="tab-content" id="v-pills-tabContent">
-							<div class="tab-pane fade show active" id="v-pills-apa" role="tabpanel" aria-labelledby="v-pills-apa-tab">
+							<div class="tab-pane fade show active" id="v-pills-apa" role="tabpanel"
+								aria-labelledby="v-pills-apa-tab">
 								<h5 class="mb-3">Pengertian Covid-19</h4>
-								<p class="text-dark-secondary">Coronavirus Disease 2019 atau COVID-19 adalah penyakit baru yang dapat menyebabkan gangguan
-									pernapasan dan radang paru.
-									Penyakit ini disebabkan oleh infeksi Severe Acute Respiratory Syndrome Coronavirus 2 (SARS-CoV-2). Gejala
-									klinis yang
-									muncul beragam, mulai dari seperti gejala flu biasa (batuk, pilek, nyeri tenggorok, nyeri otot, nyeri
-									kepala) sampai
-									yang berkomplikasi berat (pneumonia atau sepsis).</p>
+									<p class="text-dark-secondary">Coronavirus Disease 2019 atau COVID-19 adalah
+										penyakit baru yang dapat menyebabkan gangguan
+										pernapasan dan radang paru.
+										Penyakit ini disebabkan oleh infeksi Severe Acute Respiratory Syndrome
+										Coronavirus 2 (SARS-CoV-2). Gejala
+										klinis yang
+										muncul beragam, mulai dari seperti gejala flu biasa (batuk, pilek, nyeri
+										tenggorok, nyeri otot, nyeri
+										kepala) sampai
+										yang berkomplikasi berat (pneumonia atau sepsis).</p>
 							</div>
-							<div class="tab-pane fade show" id="v-pills-bagaimana" role="tabpanel" aria-labelledby="v-pills-bagaimana-tab">
+							<div class="tab-pane fade show" id="v-pills-bagaimana" role="tabpanel"
+								aria-labelledby="v-pills-bagaimana-tab">
 								<h5 class="mb-3">Covid-19 Menular Dengan Cara</h4>
-								<p class="text-dark-secondary">COVID-19 adalah penyakit baru dan para peneliti masih mempelajari bagaimana cara penularannya. Dari berbagai penelitian,
-								metode penyebaran utama penyakit ini diduga adalah melalui droplet saluran pernapasan dan kontak dekat dengan penderita.
-								Droplet merupakan partikel kecil dari mulut penderita yang dapat mengandung virus penyakit, yang dihasilkan pada saat
-								batuk, bersin, atau berbicara. Droplet dapat melewati sampai jarak tertentu (biasanya 1 meter).</p>
-								<p class="text-dark-secondary">Droplet bisa menempel di pakaian atau benda di sekitar penderita pada saat batuk atau bersin. Namun, partikel droplet
-								cukup besar sehingga tidak akan bertahan atau mengendap di udara dalam waktu yang lama. Oleh karena itu, orang yang
-								sedang sakit, diwajibkan untuk menggunakan masker untuk mencegah penyebaran droplet. Untuk penularan melalui makanan,
-								sampai saat ini belum ada bukti ilmiahnya.</p>
+									<p class="text-dark-secondary">COVID-19 adalah penyakit baru dan para peneliti masih
+										mempelajari bagaimana cara penularannya. Dari berbagai penelitian,
+										metode penyebaran utama penyakit ini diduga adalah melalui droplet saluran
+										pernapasan dan kontak dekat dengan penderita.
+										Droplet merupakan partikel kecil dari mulut penderita yang dapat mengandung
+										virus penyakit, yang dihasilkan pada saat
+										batuk, bersin, atau berbicara. Droplet dapat melewati sampai jarak tertentu
+										(biasanya 1 meter).</p>
+									<p class="text-dark-secondary">Droplet bisa menempel di pakaian atau benda di
+										sekitar penderita pada saat batuk atau bersin. Namun, partikel droplet
+										cukup besar sehingga tidak akan bertahan atau mengendap di udara dalam waktu
+										yang lama. Oleh karena itu, orang yang
+										sedang sakit, diwajibkan untuk menggunakan masker untuk mencegah penyebaran
+										droplet. Untuk penularan melalui makanan,
+										sampai saat ini belum ada bukti ilmiahnya.</p>
 							</div>
-							<div class="tab-pane fade show" id="v-pills-gejala" role="tabpanel" aria-labelledby="v-pills-gejala-tab">
+							<div class="tab-pane fade show" id="v-pills-gejala" role="tabpanel"
+								aria-labelledby="v-pills-gejala-tab">
 								<h5 class="mb-3">Gejala Covid-19</h4>
-								<p class="text-dark-secondary">Gejala umum berupa demam ≥380C, batuk kering, dan sesak napas. Jika ada orang yang dalam 14 hari sebelum muncul gejala
-								tersebut pernah melakukan perjalanan ke negara terjangkit, atau pernah merawat/kontak erat dengan penderita COVID-19,
-								maka terhadap orang tersebut akan dilakukan pemeriksaan laboratorium lebih lanjut untuk memastikan diagnosisnya.</p>
+									<p class="text-dark-secondary">Gejala umum berupa demam ≥380C, batuk kering, dan
+										sesak napas. Jika ada orang yang dalam 14 hari sebelum muncul gejala
+										tersebut pernah melakukan perjalanan ke negara terjangkit, atau pernah
+										merawat/kontak erat dengan penderita COVID-19,
+										maka terhadap orang tersebut akan dilakukan pemeriksaan laboratorium lebih
+										lanjut untuk memastikan diagnosisnya.</p>
 							</div>
-							<div class="tab-pane fade show" id="v-pills-mencegah" role="tabpanel" aria-labelledby="v-pills-mencegah-tab">
+							<div class="tab-pane fade show" id="v-pills-mencegah" role="tabpanel"
+								aria-labelledby="v-pills-mencegah-tab">
 								<h5 class="mb-3">Pencegahan Penyebaran Covid-19</h4>
-								<p class="text-dark-secondary">1. Cuci Tangan Sesering Mungkin</p>
-								<p class="text-dark-secondary">2. Jaga Jarak</p>
-								<p class="text-dark-secondary">3. Hindari menyentuh mata, hidung, dan mulut</p>
-								<p class="text-dark-secondary">4. Lakukan Kebersihan Pernapasan</p>
-								<p class="text-dark-secondary">5. Jika Mengalami Demam, Batuk, dan Kesulitan Bernapas, Cari Perawatan Medis Sejak Dini</p>
-								<p class="text-dark-secondary">6. Update Informasi dan Ikuti Saran Tenaga Medis</p>
+									<p class="text-dark-secondary">1. Cuci Tangan Sesering Mungkin</p>
+									<p class="text-dark-secondary">2. Jaga Jarak</p>
+									<p class="text-dark-secondary">3. Hindari menyentuh mata, hidung, dan mulut</p>
+									<p class="text-dark-secondary">4. Lakukan Kebersihan Pernapasan</p>
+									<p class="text-dark-secondary">5. Jika Mengalami Demam, Batuk, dan Kesulitan
+										Bernapas, Cari Perawatan Medis Sejak Dini</p>
+									<p class="text-dark-secondary">6. Update Informasi dan Ikuti Saran Tenaga Medis</p>
 							</div>
 						</div>
 					</div>
-					
-					
 				</div>
 			</div>
 
-			<div class="col-md-6" style="text-align: center; " width="50%" height="50%">
+			<div class="col-md-6 mx-auto">
 				<svg viewBox="0 0 999.75118 999.75118" enable-background="new 0 0 999.75118 999.75118" version="1.1"
 					xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 					<g id="g5">
 						<!-- <path id="HI" data-info="<div>State: Hawaii</div><div>Capital: Honolulu</div>" fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" d="" /> -->
-						<path id="tragah" fill="#FF0000" fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10"
-							stroke-linecap="round" stroke-linejoin="round" d="
+						<path id="tragah" fill="#e9ecef" fill-rule="evenodd" stroke="#000000" stroke-width="0.47995"
+							stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" d="
 							M308.60581,532.99487L310.28563,533.47483L310.5256,533.47483L311.72547,533.23485L312.68536,532.75489L313.64525,531.79497L
 							314.1252,531.07503L314.84512,530.83505L316.04499,530.83505L317.96478,531.31501L319.40462,531.79497L320.36451,532.27493L320.60448,532.99487
 							L320.84446,533.95479L320.60448,534.91471L320.36451,536.35458L320.60448,538.03444L320.12454,539.7143L319.88456,540.19426L
@@ -468,13 +452,11 @@
 							285.80834,541.39416L286.76823,539.23434L287.72813,537.55448L288.44805,536.1146L289.64791,534.91471L291.32773,532.51491L291.80767,532.03495
 							L292.76757,530.11511L293.24751,528.19528L293.72746,526.51542L293.72746,525.07554L294.20741,525.5555L295.1673,526.7554L295.88722,527.47534
 							L296.36717,527.9553L297.08709,528.67523L299.24685,530.11511L300.44672,530.59507L302.12653,531.07503L304.76624,532.03495L
-			                308.36584,532.99487L308.60581,532.99487z" fill="#FF0000"
-							data-info="<div style='text-align: center;'><p>TRAGAH</p><table><tr><td>ODP</td><td>:</td><td>217</td></tr><tr><td>ODR</td><td>:</td><td>1137</td></tr><tr><td>PDP</td><td>:</td><td>6</td></tr><tr><td>POSITIF</td><td>:</td><td>4</td></tr></table></div>">
+			                308.36584,532.99487L308.60581,532.99487z">
 						</path>
-						<path id="tanjung_bumi" fill="#FF0000"
-							data-info="<div style='text-align: center;'><p>TANJUNG BUMI</p><table><tr><td>ODP</td><td>:</td><td>8</td></tr><tr><td>ODR</td><td>:</td><td>677</td></tr><tr><td>PDP</td><td>:</td><td>3</td></tr><tr><td>POSITIF</td><td>:</td><td>2</td></tr></table></div>"
-							fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10"
-							stroke-linecap="round" stroke-linejoin="round" d="M726.39953,194.62352L726.6395,194.8635
+						<path id="tanjung_bumi" fill="#e9ecef" fill-rule="evenodd" stroke="#000000"
+							stroke-width="0.47995" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"
+							d="M726.39953,194.62352L726.6395,194.8635
 							L727.11945,194.8635L727.5994,194.62352L728.55929,194.62352L729.03924,194.8635L729.51918,194.8635L730.2391,194.8635L730.71905,195.10348
 							L730.95902,194.8635L731.67894,194.8635L732.39886,194.8635L733.35876,195.10348L734.07868,195.34346L734.55863,194.8635L734.7986,194.62352
 							L735.27855,194.8635L735.51852,194.8635L738.87815,195.34346L739.35809,195.34346L740.79793,195.58344L741.27788,195.58344L741.75783,195.58344
@@ -652,12 +634,10 @@
 							710.56128,201.58293L710.80126,201.82291L712.2411,202.06289L713.92091,202.06289L714.64083,201.82291L715.12078,201.82291L716.80059,201.58293
 							L717.28054,201.34295L718.00046,200.86299L719.20033,199.90307L720.64017,198.94315L721.36009,197.50328L722.08001,197.02332
 							L721.84003,196.54336L721.60006,196.30338L723.0399,195.82342L723.27987,195.34346L724.23977,195.34346L724.71972,195.34346L
-							724.71972,195.10348L725.43964,194.62352L725.67961,194.38354L726.15956,194.62352L726.39953,194.62352z"
-							></path>
-						<path id="tanah_merah" fill="#FF0000"
-							data-info="<div style='text-align: center;'><p>TANAH MERAH</p><table><tr><td>ODP</td><td>:</td><td>189</td></tr><tr><td>ODR</td><td>:</td><td>653</td></tr><tr><td>PDP</td><td>:</td><td>4</td></tr><tr><td>POSITIF</td><td>:</td><td>9</td></tr></table></div>"
-							fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10"
-							stroke-linecap="round" stroke-linejoin="round" d="M394.5163,463.16078L395.47619,463.16078
+							724.71972,195.10348L725.43964,194.62352L725.67961,194.38354L726.15956,194.62352L726.39953,194.62352z"></path>
+						<path id="tanah_merah" fill="#e9ecef" fill-rule="evenodd" stroke="#000000"
+							stroke-width="0.47995" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"
+							d="M394.5163,463.16078L395.47619,463.16078
 							L396.19611,462.9208L397.39598,462.68082L400.99558,461.96088L402.19544,461.7209L402.43542,461.7209L403.63529,461.7209L405.55507,461.48092
 							L405.79505,461.48092L406.27499,461.48092L406.75494,461.48092L409.39465,460.76099L410.59451,460.52101L412.5143,460.28103L
 							414.19412,459.80107L415.87393,459.32111L417.55374,458.84115L419.47353,459.08113L420.19345,459.08113L420.43342,458.84115L
@@ -830,10 +810,8 @@
 							L380.35786,458.60117L380.59784,458.36119L381.31776,458.12121L382.03768,458.12121L383.47752,458.36119L384.91736,458.84115
 							L385.87725,459.08113L387.07712,459.80107L387.79704,460.04105L388.51696,460.52101L389.23688,461.24094L389.9568,461.48092L
 							391.39664,461.96088L392.35653,462.20086L393.31643,462.9208L394.5163,463.16078z"></path>
-						<path id="socah" fill="#FF0000"
-							data-info="<div style='text-align: center;'><p>SOCAH</p><table><tr><td>ODP</td><td>:</td><td>26</td></tr><tr><td>ODR</td><td>:</td><td>504</td></tr><tr><td>PDP</td><td>:</td><td>7</td></tr><tr><td>POSITIF</td><td>:</td><td>20</td></tr></table></div>"
-							fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10"
-							stroke-linecap="round" stroke-linejoin="round" d="M140.14448,500.83759L140.62442,501.31755
+						<path id="socah" fill="#e9ecef" fill-rule="evenodd" stroke="#000000" stroke-width="0.47995"
+							stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" d="M140.14448,500.83759L140.62442,501.31755
 							L140.62442,501.79751L140.8644,502.03749L140.8644,502.27747L140.8644,502.51745L141.34434,502.75743L142.06426,502.99741L143.02416,503.47737
 							L143.26413,503.71735L143.26413,503.95733L143.5041,503.95733L143.5041,504.19731L143.74408,504.19731L143.98405,504.19731L144.22402,504.19731
 							L144.464,504.43729L144.70397,504.19731L144.94394,504.19731L145.18392,504.19731L145.18392,503.95733L145.42389,503.95733L145.42389,503.71735
@@ -991,10 +969,8 @@
 							L137.02482,498.91775L137.26479,498.91775L137.74474,499.15773L138.22469,499.39771L138.70463,499.63769L138.94461,499.63769
 							L139.42455,500.11765L139.66453,500.11765L139.66453,500.35763L139.9045,500.35763L140.14448,500.59761L140.14448,500.83759z
 							"></path>
-						<path id="sepulu" fill="#FF0000"
-							data-info="<div style='text-align: center;'><p>SEPULU</p><table><tr><td>ODP</td><td>:</td><td>39</td></tr><tr><td>ODR</td><td>:</td><td>524</td></tr><tr><td>PDP</td><td>:</td><td>1</td></tr><tr><td>POSITIF</td><td>:</td><td>8</td></tr></table></div>"
-							fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10"
-							stroke-linecap="round" stroke-linejoin="round" d="M687.3,198.5l0.5,0.2h0.2l0.2-0.5h0.7h0.2v0.7l0.2,0.7v1.2v0.7v0.7v0.7v0.2v0.2v0.2v0.2v0.2h-0.2v0.2
+						<path id="sepulu" fill="#e9ecef" fill-rule="evenodd" stroke="#000000" stroke-width="0.47995"
+							stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" d="M687.3,198.5l0.5,0.2h0.2l0.2-0.5h0.7h0.2v0.7l0.2,0.7v1.2v0.7v0.7v0.7v0.2v0.2v0.2v0.2v0.2h-0.2v0.2
 							l-0.2,0.2l-0.2,0.7l-0.2,0.2v0.2v0.2l0.2,0.2l0.5,0.2h0.5l0.5,0.2l0.2,0.2v0.2l-0.2,1l-0.5,0.7l-0.2,0.2h-0.2l-0.5-0.2l-1.4-0.2
 							l-0.5,0.7l-0.2,0.2l-0.7,0.2h-0.5v0.2l-0.5,0.5l-0.5,1.2l-0.5,1l-0.5,0.7l-0.2,1L683,215l-0.2,0.5v0.5v0.2l-0.5,1l-0.2,1.4
 							l-0.7,1.7l-0.2,1.4l-0.5,1.4l-0.5,1.4l-0.2,1.2l-0.2,1v1l-0.2,0.5v0.2v1l-0.2,1l-0.2,1.2l-0.2,1l-0.2,0.7l-0.2,1.4l-0.2,1.2
@@ -1062,10 +1038,8 @@
 							l0.5-0.5l0.2-0.5l-0.2-0.5l-0.2-0.5v-0.2v-0.2v-0.2l0.2-0.5v-1.2v-0.7l0.2-0.5l0.2-0.5l0.2-0.2l0.5-0.2l0.7-0.2l0.5-0.5l0.2-0.2
 							h0.5h0.2v0.2l0.2,0.2l0.2,1v0.2l0.2,0.2h1.4h1l1.2-0.2l0.7-0.2h0.5l0.2,0.2v0.2h0.2l0.5-0.5l0.2-0.2l0.2-0.5l0.2-1l1-0.2h0.2
 							l0.5,0.2l0.5,0.5l1,0.2L687.3,198.5z"></path>
-						<path id="modung" fill="#FF0000"
-							data-info="<div style='text-align: center;'><p>MODUNG</p><table><tr><td>ODP</td><td>:</td><td>103</td></tr><tr><td>ODR</td><td>:</td><td>2058</td></tr><tr><td>PDP</td><td>:</td><td>3</td></tr><tr><td>POSITIF</td><td>:</td><td>7</td></tr></table></div>"
-							fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10"
-							stroke-linecap="round" stroke-linejoin="round" d="M512.34324,617.22774L512.58322,617.46772
+						<path id="modung" fill="#e9ecef" fill-rule="evenodd" stroke="#000000" stroke-width="0.47995"
+							stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" d="M512.34324,617.22774L512.58322,617.46772
 							L512.82319,617.7077L512.82319,617.94768L513.06316,618.18765L513.06316,618.42763L513.06316,618.90759L513.06316,619.38755L
 							513.06316,619.86751L512.82319,620.58745L512.82319,621.06741L512.58322,621.78735L512.10327,622.50729L512.10327,622.98725L
 							511.62332,623.70719L511.38335,624.18715L511.14338,624.42713L510.9034,624.66711L510.66343,624.90709L510.42346,625.38705L510.18348,625.867
@@ -1323,10 +1297,8 @@
 							L508.26369,616.98776L508.50367,616.98776L508.74364,616.98776L509.22359,616.74778L509.46356,616.74778L509.94351,616.74778
 							L510.18348,616.74778L510.42346,616.74778L510.66343,616.74778L511.14338,616.74778L511.62332,616.74778L511.8633,616.98776L
 							512.34324,617.22774z"></path>
-						<path id="labang" fill="#FF0000"
-							data-info="<div style='text-align: center;'><p>LABANG</p><table><tr><td>ODP</td><td>:</td><td>33</td></tr><tr><td>ODR</td><td>:</td><td>640</td></tr><tr><td>PDP</td><td>:</td><td>9</td></tr><tr><td>POSITIF</td><td>:</td><td>14</td></tr></table></div>"
-							fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10"
-							stroke-linecap="round" stroke-linejoin="round"
+						<path id="labang" fill="#e9ecef" fill-rule="evenodd" stroke="#000000" stroke-width="0.47995"
+							stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"
 							d="M295.1673,600.42916L296.84712,601.62906L297.08709,601.62906L297.80701,602.10902L299.24685,602.349L299.96677,602.58898L301.16664,603.54889
 							L302.12653,604.74879L302.84645,605.94869L303.80634,608.10851L305.00621,612.18816L305.48616,612.9081L305.72613,614.58796L
 							305.48616,615.06792L305.48616,616.02784L305.48616,616.5078L305.48616,616.98776L305.00621,619.86751L304.52626,622.26731L304.28629,623.22723
@@ -1448,10 +1420,8 @@
 							L278.60914,608.10851L278.60914,606.42865L278.60914,604.50881L278.60914,603.06894L278.84911,600.90912L280.28895,600.42916
 							L281.24884,600.18918L282.44871,599.9492L283.64858,600.18918L285.08842,600.66914L286.04831,600.66914L286.76823,600.42916L
 							288.92799,600.18918L290.84778,599.9492L292.28762,599.9492L292.76757,599.9492L293.96743,600.18918L295.1673,600.42916z"></path>
-						<path id="kwanyar"  fill="#FF0000"
-							data-info="<div style='text-align: center;'><p>KWANYAR</p><table><tr><td>ODP</td><td>:</td><td>84</td></tr><tr><td>ODR</td><td>:</td><td>1281</td></tr><tr><td>PDP</td><td>:</td><td>5</td></tr><tr><td>POSITIF</td><td>:</td><td>18</td></tr></table></div>"
-							fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10"
-							stroke-linecap="round" stroke-linejoin="round" d="M494.82518,629.22672L494.58521,629.4667
+						<path id="kwanyar" fill="#e9ecef" fill-rule="evenodd" stroke="#000000" stroke-width="0.47995"
+							stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" d="M494.82518,629.22672L494.58521,629.4667
 							L494.34524,629.94666L494.10526,629.94666L494.10526,630.18664L493.86529,630.6666L493.62532,630.6666L493.62532,631.14656L493.62532,631.38654
 							L493.62532,631.62652L493.38534,632.58644L493.38534,633.0664L493.14537,633.54635L493.14537,634.02631L493.14537,634.50627L
 							493.14537,634.74625L493.14537,635.22621L493.14537,635.46619L492.9054,636.66609L492.66542,637.14605L492.66542,638.82591L492.66542,639.06589
@@ -1620,10 +1590,8 @@
 							L500.58455,621.30739L500.58455,621.78735L500.58455,622.02733L500.58455,622.26731L500.58455,622.74727L500.1046,623.70719L
 							499.38468,624.42713L498.90473,624.90709L498.42478,625.38705L497.94484,625.867L497.46489,626.34696L496.98494,626.82692L496.505,627.30688
 							L496.02505,627.78684L495.78508,628.2668L495.30513,628.74676L494.82518,629.22672z"></path>
-						<path id="konang" fill="#FF0000"
-							data-info="<div style='text-align: center;'><p>KONANG</p><table><tr><td>ODP</td><td>:</td><td>30</td></tr><tr><td>ODR</td><td>:</td><td>768</td></tr><tr><td>PDP</td><td>:</td><td>1</td></tr><tr><td>POSITIF</td><td>:</td><td>1</td></tr></table></div>"
-							fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10"
-							stroke-linecap="round" stroke-linejoin="round" d="M649.84801,423.08418L649.84801,423.32416
+						<path id="konang" fill="#e9ecef" fill-rule="evenodd" stroke="#000000" stroke-width="0.47995"
+							stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" d="M649.84801,423.08418L649.84801,423.32416
 							L649.60804,423.32416L649.60804,423.56413L649.60804,424.04409L649.36806,425.00401L649.36806,425.48397L649.60804,425.96393
 							L649.84801,426.68387L650.08798,427.40381L649.84801,428.12375L649.84801,428.84369L649.84801,429.32365L650.08798,429.56363
 							L650.08798,429.80361L650.56793,430.76353L651.04788,431.24348L651.28785,431.48346L651.28785,431.72344L651.28785,432.68336
@@ -1862,10 +1830,8 @@
 							L649.12809,419.96444L649.60804,419.96444L650.08798,420.20442L650.56793,420.68438L650.8079,420.92436L650.8079,421.40432L650.8079,421.88428
 							L650.8079,422.12426L650.56793,422.36424L650.32796,422.60422L650.08798,422.8442L649.84801,423.08418">
 						</path>
-						<path id="arosbaya" fill="#FF0000"
-							data-info="<div style='text-align: center;'><p>AROSBAYA</p><table><tr><td>ODP</td><td>:</td><td>41</td></tr><tr><td>ODR</td><td>:</td><td>1388</td></tr><tr><td>PDP</td><td>:</td><td>5</td></tr><tr><td>POSITIF</td><td>:</td><td>16</td></tr></table></div>"
-							fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10"
-							stroke-linecap="round" stroke-linejoin="round" d="M353.48084,297.5748L353.96079,297.81478L355.16066,297.5748L356.12055,297.09484L356.6005,297.33482L357.32042,297.81478L357.80036,298.53472
+						<path id="arosbaya" fill="#e9ecef" fill-rule="evenodd" stroke="#000000" stroke-width="0.47995"
+							stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" d="M353.48084,297.5748L353.96079,297.81478L355.16066,297.5748L356.12055,297.09484L356.6005,297.33482L357.32042,297.81478L357.80036,298.53472
 							L357.80036,299.49464L357.80036,299.9746L357.32042,300.45456L356.84047,300.69454L356.36052,300.69454L355.88058,300.69454L
 							354.68071,300.21458L353.00089,299.49464L352.52095,299.49464L352.28097,299.49464L351.80103,299.9746L351.80103,300.45456L351.80103,301.1745
 							L352.28097,301.65446L352.52095,302.13442L352.76092,302.3744L353.72081,303.33432L355.16066,304.77419L355.6406,305.25415L355.88058,305.25415
@@ -1983,12 +1949,9 @@
 							346.76159,291.57531L348.20143,290.13543L348.68137,289.17551L349.16132,288.45558L349.40129,287.97562L349.40129,287.49566L
 							349.16132,287.0157L348.68137,285.8158L348.20143,285.33584L350.84113,286.77572L351.80103,287.49566L352.76092,288.45558L353.48084,289.17551
 							L354.20076,290.61539L355.16066,292.29525L355.16066,293.01519L355.16066,293.73513L355.16066,293.97511L354.20076,294.93503
-							L353.00089,295.65497L352.76092,296.13493L353.00089,296.85486L353.24087,297.33482L353.48084,297.5748z"
-							></path>
-						<path id="bangkalan" fill="#FF0000"
-							data-info="<div style='text-align: center;'><p>BANGKALAN</p><table><tr><td>ODP</td><td>:</td><td>9</td></tr><tr><td>ODR</td><td>:</td><td>577</td></tr><tr><td>PDP</td><td>:</td><td>21</td></tr><tr><td>POSITIF</td><td>:</td><td>124</td></tr></table></div>"
-							fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10"
-							stroke-linecap="round" stroke-linejoin="round" d="M291.3,380.8l0.2,1l1,0.7l1.4,1.2l1,0.7l1.2,1.2l0.7,0.2l0.5,0.2l1,0.2l1,1l1.4,1.2h0.2l1.7,1.2l1.9,1.4
+							L353.00089,295.65497L352.76092,296.13493L353.00089,296.85486L353.24087,297.33482L353.48084,297.5748z"></path>
+						<path id="bangkalan" fill="#e9ecef" fill-rule="evenodd" stroke="#000000" stroke-width="0.47995"
+							stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" d="M291.3,380.8l0.2,1l1,0.7l1.4,1.2l1,0.7l1.2,1.2l0.7,0.2l0.5,0.2l1,0.2l1,1l1.4,1.2h0.2l1.7,1.2l1.9,1.4
 							l1,0.7l0.5,0.2l1.2,1.2l0.7,0.7l0.5,1l0.5,0.7l0.2,1l-0.2,0.7l-0.5,1.2h-0.2l-1,1.2l-1.4,1.7l-2.6,3.8h-0.2l-0.7,1.7l-0.7,1.2
 							l-0.7,1.4l-0.5,0.7l0.5,0.7l1,0.5v0.2l2.2,1.7l1,1l0.7,0.5l0.5,0.2v0.2l3.1,2.6l0.7,0.5l0.2,0.2l0.5,0.5l1.2,1l-1.4,0.5h-1.9
 							l-1.4,0.2l-1,0.2l-1.2,0.5l-1.2,1l-1.2,1l-0.7-0.2l-0.7-0.5l-0.7-0.5l-2.2-0.7l-0.7-0.2h-0.5l-1.2-0.5l-1-0.5l-0.5,0.5l-0.5,0.2
@@ -2046,10 +2009,8 @@
 							l0.2-0.2v-0.2l0.5-0.2l0.2-0.2l1-0.7l0.7-0.5l0.2-0.2l0.7-1l0.2-0.2v-0.2l1-2.2h0.2h0.2h0.5h0.7l0.7-0.2h0.7l0.2-0.2v-0.7v-0.7
 							l0.2-0.5l0.7-0.7l0.2-0.2l0.5-0.2l0.2-0.5l0.2-0.5l1-0.7h0.2l0.5-0.2l0.2-0.2l1-0.2l0.7-0.2h0.7h0.2v-0.2l0.2-0.5l0.2-0.2h0.5
 							h0.2h0.2l0.7-0.5h0.2h0.5h0.2l0.2-0.2"></path>
-						<path id="blega" fill="#FF0000"
-							data-info="<div style='text-align: center;'><p>BLEGA</p><table><tr><td>ODP</td><td>:</td><td>75</td></tr><tr><td>ODR</td><td>:</td><td>2311</td></tr><tr><td>PDP</td><td>:</td><td>8</td></tr><tr><td>POSITIF</td><td>:</td><td>18</td></tr></table></div>"
-							fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10"
-							stroke-linecap="round" stroke-linejoin="round" d="M741.03791,547.39365L741.75783,547.39365
+						<path id="blega" fill="#e9ecef" fill-rule="evenodd" stroke="#000000" stroke-width="0.47995"
+							stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" d="M741.03791,547.39365L741.75783,547.39365
 							L742.23777,547.39365L742.95769,547.15367L744.39754,547.39365L745.35743,547.39365L747.03724,548.59355L747.27722,548.83353
 							L747.75716,549.07351L747.99714,549.07351L747.99714,548.83353L748.71706,549.07351L752.7966,550.51339L753.7565,550.99334L755.67629,551.71328
 							L756.63618,552.6732L757.83605,553.15316L758.79594,553.39314L759.03591,553.39314L760.47575,553.8731L761.43565,554.11308L762.15557,554.35306
@@ -2293,10 +2254,8 @@
 							L737.19833,546.67371L736.95836,545.95377L736.95836,545.71379L736.95836,545.47381L737.19833,545.47381L737.43831,545.71379
 							L737.43831,545.95377L738.15823,546.19375L738.63817,546.67371L739.11812,546.91369L739.35809,546.91369L739.83804,547.39365
 							L741.03791,547.39365z"></path>
-						<path id="burneh" fill="#FF0000"
-							data-info="<div style='text-align: center;'><p>BURNEH</p><table><tr><td>ODP</td><td>:</td><td>42</td></tr><tr><td>ODR</td><td>:</td><td>638</td></tr><tr><td>PDP</td><td>:</td><td>12</td></tr><tr><td>POSITIF</td><td>:</td><td>32</td></tr></table></div>"
-							fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10"
-							stroke-linecap="round" stroke-linejoin="round" d="M340.3,381.1l0.5,0.2l0.5,0.5l1,0.7l1.2,0.5l2.9,1.7l1.9,1.2l0.7,0.7v0.2v0.2l-0.2,1.7v0.2l0.2,1.4l0.7,1.7
+						<path id="burneh" fill="#e9ecef" fill-rule="evenodd" stroke="#000000" stroke-width="0.47995"
+							stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" d="M340.3,381.1l0.5,0.2l0.5,0.5l1,0.7l1.2,0.5l2.9,1.7l1.9,1.2l0.7,0.7v0.2v0.2l-0.2,1.7v0.2l0.2,1.4l0.7,1.7
 							l0.2,0.5l0.7,1.4l1,1.4l0.7,0.7l0.5,0.2l1.4,1l2.9,1.2l0.7,0.7l0.7,1.2l0.5,1.2l0.5,0.2l0.5,0.7l0.2,0.5l0.2,0.7l0.7,1.2l1.7,2.2
 							l1,1l0.7,0.7l1.2,1h0.2v0.2h0.2l0.2,0.2v0.2l-0.2,0.2v0.2l-0.5,0.2l-0.2,1H365h-0.2h-0.2l-0.2,0.5v0.2l0.2,0.5l0.2,0.5l0.2,0.2
 							l-0.2,0.7v0.2v0.2h0.2v0.2l0.5-0.2l0.2-0.2v1h-0.2l-0.2,0.2v0.2l-0.2,0.2v0.2l0.5,0.2l0.7,0.2l0.5,0.2l0.2,0.2l0.5,0.2v0.5v0.5
@@ -2347,10 +2306,8 @@
 							l1.9,0.2l1.2-0.2l0.7-0.5l0.7-0.5v-1v-1.9l-2.6-5l-0.7-3.6l0.2-2.4l1.7-1.4l1.4-0.7l2.2,0.5l3.1,0.5l3.8,1.7l3.1-2.4h0.2l0.2-0.7
 							l0.2-0.2l0.2-0.5l0.5-1.4l0.5-0.7l0.5-0.5l1,0.5l1.2,0.7l3.6,1.9h0.2l1,0.5l0.7,0.5l0.7,0.2l0.2,0.2l0.7,0.2h0.2l0.2,0.2l0.7,0.5
 							L340.3,381.1z"></path>
-						<path id="galis" fill="#FF0000"
-							data-info="<div style='text-align: center;'><p>GALIS</p><table><tr><td>ODP</td><td>:</td><td>65</td></tr><tr><td>ODR</td><td>:</td><td>3096</td></tr><tr><td>PDP</td><td>:</td><td>3</td></tr><tr><td>POSITIF</td><td>:</td><td>4</td></tr></table></div>"
-							fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10"
-							stroke-linecap="round" stroke-linejoin="round" d="M516.18282,492.67828L517.14271,492.91826
+						<path id="galis" fill="#e9ecef" fill-rule="evenodd" stroke="#000000" stroke-width="0.47995"
+							stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" d="M516.18282,492.67828L517.14271,492.91826
 							L519.0625,492.67828L521.94218,493.87818L522.6621,494.11816L523.86197,494.11816L524.82186,494.11816L525.78175,494.35814L526.2617,494.35814
 							L527.46157,494.11816L528.18149,493.87818L528.90141,493.87818L529.38136,493.6382L530.34125,493.39822L531.78109,493.15824L
 							532.50101,493.15824L533.22093,492.91826L533.4609,492.91826L534.4208,492.67828L535.38069,492.67828L536.10061,492.67828L536.58056,492.67828
@@ -2610,10 +2567,8 @@
 							L505.62399,489.55855L506.34391,489.79853L506.82385,489.79853L507.78375,490.03851L508.50367,490.03851L509.46356,490.27849
 							L510.42346,490.51847L511.14338,490.75845L511.8633,491.2384L512.82319,491.47838L513.30314,491.47838L513.78308,491.71836L514.503,491.95834
 							L515.4629,492.4383L516.18282,492.67828z"></path>
-						<path id="geger"  fill="#FF0000"
-							data-info="<div style='text-align: center;'><p>GEGER</p><table><tr><td>ODP</td><td>:</td><td>34</td></tr><tr><td>ODR</td><td>:</td><td>831</td></tr><tr><td>PDP</td><td>:</td><td>4</td></tr><tr><td>POSITIF</td><td>:</td><td>5</td></tr></table></div>"
-							fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10"
-							stroke-linecap="round" stroke-linejoin="round" d="M433.87194,326.37236L433.63196,326.85232
+						<path id="geger" fill="#e9ecef" fill-rule="evenodd" stroke="#000000" stroke-width="0.47995"
+							stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" d="M433.87194,326.37236L433.63196,326.85232
 							L432.91204,327.81224L432.91204,328.2922L433.15202,328.53218L433.39199,328.53218L434.59186,328.53218L434.83183,328.53218L
 							435.0718,328.77216L434.83183,329.01214L434.59186,329.25212L434.59186,329.4921L434.35188,329.4921L434.59186,329.73208L434.59186,329.97206
 							L434.59186,330.21204L434.83183,330.45202L435.0718,331.17196L435.55175,331.8919L436.51164,332.37186L436.75162,332.61184L437.23156,333.0918
@@ -2859,10 +2814,8 @@
 							422.59319,325.41245L422.11324,324.93249L422.11324,324.45253L422.59319,324.21255L423.31311,323.97257L424.99292,323.73259L
 							425.23289,323.49261L428.35255,322.77267L429.79239,322.77267L430.51231,323.01265L431.23223,323.01265L431.71217,323.49261L
 							432.4321,324.45253L433.39199,325.65243L433.87194,326.37236z"></path>
-						<path id="kamal" fill="#FF0000"
-							data-info="<div style='text-align: center;'><p>KAMAL</p><table><tr><td>ODP</td><td>:</td><td>18</td></tr><tr><td>ODR</td><td>:</td><td>604</td></tr><tr><td>PDP</td><td>:</td><td>10</td></tr><tr><td>POSITIF</td><td>:</td><td>50</td></tr></table></div>"
-							fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10"
-							stroke-linecap="round" stroke-linejoin="round" d="M188.37913,596.58948L188.85908,596.58948L188.85908,596.3495L189.09905,596.10952L189.33903,595.62957L189.33903,595.38959L
+						<path id="kamal" fill="#e9ecef" fill-rule="evenodd" stroke="#000000" stroke-width="0.47995"
+							stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" d="M188.37913,596.58948L188.85908,596.58948L188.85908,596.3495L189.09905,596.10952L189.33903,595.62957L189.33903,595.38959L
 							189.579,595.14961L189.579,594.90963L189.81897,594.66965L190.05895,594.42967L190.29892,594.18969L191.01884,594.18969L193.1786,594.66965
 							L193.41857,594.66965L196.05828,595.14961L197.01817,595.62957L196.7782,596.3495L196.29825,596.58948L196.05828,596.58948L195.09839,598.7493
 							L194.85841,598.98928L194.61844,599.46924L194.61844,599.70922L194.61844,599.9492L195.09839,599.9492L195.33836,599.9492L195.57833,600.18918
@@ -2986,10 +2939,8 @@
 							178.54022,602.349L178.7802,601.86904L178.54022,599.9492L178.7802,599.22926L179.98006,595.38959L180.22004,594.90963L181.65988,593.46975
 							L182.13982,593.70973L184.05961,594.42967L184.05961,594.66965L184.77953,594.90963L185.0195,595.14961L185.73942,595.62957L
 							186.69932,596.10952L187.65921,596.3495L188.37913,596.58948z"></path>
-						<path id="klampis" fill="#FF0000"
-							data-info="<div style='text-align: center;'><p>KLAMPIS</p><table><tr><td>ODP</td><td>:</td><td>27</td></tr><tr><td>ODR</td><td>:</td><td>734</td></tr><tr><td>PDP</td><td>:</td><td>7</td></tr><tr><td>POSITIF</td><td>:</td><td>10</td></tr></table></div>"
-							fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10"
-							stroke-linecap="round" stroke-linejoin="round" d="M537.3,216.2l1,0.2h0.2h0.2h1.9h0.2l1-0.2h1.4h0.2v0.2v0.5l-0.2,1l0.2,0.2l0.5,0.7l0.5,0.5l0.5,0.5v0.5
+						<path id="klampis" fill="#e9ecef" fill-rule="evenodd" stroke="#000000" stroke-width="0.47995"
+							stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" d="M537.3,216.2l1,0.2h0.2h0.2h1.9h0.2l1-0.2h1.4h0.2v0.2v0.5l-0.2,1l0.2,0.2l0.5,0.7l0.5,0.5l0.5,0.5v0.5
 							l0.2,0.5v0.7l0.7,1.9l-0.2,0.2l-0.2,0.5v0.5v0.2l-0.2,0.7v0.7v1l-0.2,0.2v0.5v0.2l-0.2,0.5l-0.2,0.5l-0.2,1l-0.2,0.5l-0.2,0.2
 							l-0.2,0.5l-0.5,1.4l-0.2,0.5l-0.5,1.4l-0.5,1.4l-0.2,1.7l0.2,1.4v1.7v0.2v1l-0.2,1.4l-0.2,1l-0.2,1.7l-0.5,1.9l-0.5,1.2l-0.2,1.2
 							v0.2v0.2l-0.2,1.2v0.2v0.2v1.7v1.4v1.2v0.2l0.2,0.5v0.7v1l-0.2,1.2l-0.7,2.2l0.2,1.4v1l0.5,0.5l0.2,0.5l1,1l1,1.4l0.5,1.2
@@ -3056,10 +3007,8 @@
 							l2.2,0.2l0.2-0.2l0.5-0.5h0.2l1-0.2l0.2-0.2h0.5l0.2,0.2l0.7,0.2l2.4,1l1.2,0.5h0.5h0.7l1.2-0.2h0.7l0.7-0.2l0.7-0.2l1-0.7
 							l0.7-0.5l1-1l0.7-0.7l0.2-0.5v-0.7l0.7-1.2l0.5-0.5l0.7-0.5l1-0.5h0.2l0.7,0.2h0.7l2.4,0.5l0.5,0.2l0.7,0.5l0.2,0.2l1,0.5
 							l1.4,0.2l0.2,0.2h1H537.3z"></path>
-						<path id="kokop" fill="#FF0000"
-							data-info="<div style='text-align: center;'><p>KOKOP</p><table><tr><td>ODP</td><td>:</td><td>80</td></tr><tr><td>ODR</td><td>:</td><td>2140</td></tr><tr><td>PDP</td><td>:</td><td>2</td></tr><tr><td>POSITIF</td><td>:</td><td>2</td></tr></table></div>"
-							fill-rule="evenodd" stroke="#000000" stroke-width="0.47995" stroke-miterlimit="10"
-							stroke-linecap="round" stroke-linejoin="round" d="M767.91493,280.05629L768.87482,279.81631
+						<path id="kokop" fill="#e9ecef" fill-rule="evenodd" stroke="#000000" stroke-width="0.47995"
+							stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" d="M767.91493,280.05629L768.87482,279.81631
 							L769.1148,279.81631L771.51453,280.05629L772.47442,280.05629L772.95437,280.29627L774.63419,280.05629L775.83405,280.29627L
 							777.51387,280.29627L778.71373,280.29627L778.95371,280.29627L779.19368,280.29627L779.43365,281.01621L779.9136,281.73614L780.15357,282.2161
 							L780.39355,283.65598L780.63352,284.13594L780.87349,284.6159L781.11347,284.85588L781.35344,284.85588L781.83339,284.6159L782.31333,283.89596
@@ -3330,11 +3279,10 @@
 							L759.99581,284.37592L760.23578,282.93604L760.23578,281.97612L759.99581,281.01621L759.27589,280.77623L759.03591,280.53625
 							L758.31599,279.57633L758.31599,278.61641L758.31599,278.37643L758.31599,278.13645L758.55597,277.65649L758.79594,277.17653
 							L759.27589,276.45659L759.99581,276.69657L760.9557,277.17653L761.67562,277.89647L762.63551,278.61641L763.35544,279.09637L
-							764.31533,279.33635L765.27522,279.57633L765.99514,279.81631L766.71506,279.81631L767.91493,280.05629z"
-							></path>
+							764.31533,279.33635L765.27522,279.57633L765.99514,279.81631L766.71506,279.81631L767.91493,280.05629z"></path>
 					</g>
 				</svg>
-			
+				<div id="info-box" class="shadow-custom px-3 py-2"></div>
 			</div>
 		</div>
 	</section>
@@ -3462,6 +3410,102 @@
 
 	<!-- Data wilayah  -->
 	<script src="assets/js/chart/danadesa.js"></script>
+
+	<!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
+
+	<!-- google map -->
+	<!-- <script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+	<script src="http://covid19.bangkalankab.go.id/vendor/front/plugins/google-map/gmap.js"></script> -->
+
+	<script type="text/javascript">
+		var data = [
+			{ "ID": "2341", "KECAMATAN": "BANGKALAN", "ODR": "577", "ODP": "9", "PDP": "21", "POSITIF": "124", "OTG": "155", "WARNA": "B71C1C", "TANGGAL": "2020-07-26" },
+			{ "ID": "2342", "KECAMATAN": "SOCAH", "ODR": "504", "ODP": "26", "PDP": "7", "POSITIF": "20", "OTG": "152", "WARNA": "880E4F", "TANGGAL": "2020-07-26" },
+			{ "ID": "2343", "KECAMATAN": "BURNEH", "ODR": "638", "ODP": "42", "PDP": "12", "POSITIF": "32", "OTG": "72", "WARNA": "4A148C", "TANGGAL": "2020-07-26" },
+			{ "ID": "2344", "KECAMATAN": "KAMAL", "ODR": "604", "ODP": "18", "PDP": "10", "POSITIF": "50", "OTG": "67", "WARNA": "F44336", "TANGGAL": "2020-07-26" },
+			{ "ID": "2345", "KECAMATAN": "AROSBAYA", "ODR": "1388", "ODP": "41", "PDP": "5", "POSITIF": "16", "OTG": "69", "WARNA": "1A237E", "TANGGAL": "2020-07-26" },
+			{ "ID": "2346", "KECAMATAN": "GEGER", "ODR": "831", "ODP": "34", "PDP": "4", "POSITIF": "5", "OTG": "18", "WARNA": "0D47A1", "TANGGAL": "2020-07-26" },
+			{ "ID": "2347", "KECAMATAN": "KLAMPIS", "ODR": "734", "ODP": "27", "PDP": "7", "POSITIF": "10", "OTG": "155", "WARNA": "607D8B", "TANGGAL": "2020-07-26" },
+			{ "ID": "2348", "KECAMATAN": "SEPULU", "ODR": "524", "ODP": "39", "PDP": "1", "POSITIF": "8", "OTG": "257", "WARNA": "006064", "TANGGAL": "2020-07-26" },
+			{ "ID": "2349", "KECAMATAN": "TANJUNG BUMI", "ODR": "677", "ODP": "8", "PDP": "3", "POSITIF": "2", "OTG": "39", "WARNA": "004D40", "TANGGAL": "2020-07-26" },
+			{ "ID": "2350", "KECAMATAN": "KOKOP", "ODR": "2140", "ODP": "80", "PDP": "2", "POSITIF": "2", "OTG": "8", "WARNA": "1B5E20", "TANGGAL": "2020-07-26" },
+			{ "ID": "2351", "KECAMATAN": "KWANYAR", "ODR": "1281", "ODP": "84", "PDP": "5", "POSITIF": "18", "OTG": "49", "WARNA": "33691E", "TANGGAL": "2020-07-26" },
+			{ "ID": "2352", "KECAMATAN": "LABANG", "ODR": "640", "ODP": "33", "PDP": "9", "POSITIF": "14", "OTG": "99", "WARNA": "827717", "TANGGAL": "2020-07-26" },
+			{ "ID": "2353", "KECAMATAN": "TANAH MERAH", "ODR": "653", "ODP": "189", "PDP": "4", "POSITIF": "9", "OTG": "108", "WARNA": "F57F17", "TANGGAL": "2020-07-26" },
+			{ "ID": "2354", "KECAMATAN": "TRAGAH", "ODR": "1137", "ODP": "217", "PDP": "6", "POSITIF": "4", "OTG": "39", "WARNA": "FF6F00", "TANGGAL": "2020-07-26" },
+			{ "ID": "2355", "KECAMATAN": "BLEGA", "ODR": "2311", "ODP": "75", "PDP": "8", "POSITIF": "18", "OTG": "101", "WARNA": "E65100", "TANGGAL": "2020-07-26" },
+			{ "ID": "2356", "KECAMATAN": "MODUNG", "ODR": "2058", "ODP": "103", "PDP": "3", "POSITIF": "7", "OTG": "48", "WARNA": "BF360C", "TANGGAL": "2020-07-26" },
+			{ "ID": "2357", "KECAMATAN": "KONANG", "ODR": "768", "ODP": "30", "PDP": "1", "POSITIF": "1", "OTG": "20", "WARNA": "3E2723", "TANGGAL": "2020-07-26" },
+			{ "ID": "2358", "KECAMATAN": "GALIS", "ODR": "3096", "ODP": "65", "PDP": "3", "POSITIF": "4", "OTG": "36", "WARNA": "212121", "TANGGAL": "2020-07-26" }
+		]
+		//console.log(data);
+		console.log(data.length);
+		// console.log(id.length);
+
+		for (var i = 0; i < data.length; i++) {
+			//console.log("this work");
+			// id path SVG
+			var id = ["kokop", "klampis", "kamal", "geger", "galis", "burneh", "blega", "bangkalan", "arosbaya", "konang", "kwanyar", "labang", "modung", "sepulu", "socah", "tanah_merah", "tanjung_bumi", "tragah"];
+			for (var j = 0; j < id.length; j++) {
+				// console.log(data[i].KECAMATAN);
+				//console.log(id[j]);
+				//console.log("this also work");
+				// var this_id;
+				// console.log(this_id);
+				if (id[j].replace("_", " ").toUpperCase() == data[i].KECAMATAN) {
+					console.log(j + " " + data[i].KECAMATAN + "=" + id[j]);
+					//console.log("this also work work");
+					var this_id = id[j];
+					//console.log(this_id);
+				};
+
+			};
+			console.log(this_id);
+			console.log(data[i].KECAMATAN);
+			var svg_path_id = document.getElementById(this_id);
+			svg_path_id.setAttribute("fill", "#" + data[i].WARNA);
+			console.log(svg_path_id);
+			var model = "<div><p class='mb-1 fw-bold' style='text-align: center;'>" 
+				+ data[i].KECAMATAN 
+				+ "</p><table class='text-start'><tr><td>Konfirmasi</td><td class='px-2'> : </td><td>" 
+				+ data[i].ODR
+				+ "</td></tr><tr><td>Aktif</td><td class='px-2'> : </td><td>" 
+				+ data[i].ODP
+				+ "</td></tr><tr><td>Sembuh</td><td class='px-2'> : </td><td>" 
+				+ data[i].PDP 
+				+ "</td></tr><tr><td>Meninggal</td><td class='px-2'> : </td><td>" 
+				+ data[i].POSITIF 
+				+ "</td></tr></table></div>";
+			svg_path_id.setAttribute("data-info", model);
+		};
+
+		// When svg path hovered 
+		$("path, circle").hover(function (e) {
+			$('#info-box').css('display', 'block');
+			// fill the info box with svg path "data-info"
+			$('#info-box').html($(this).data('info'));
+		});
+
+		$("path, circle").mouseleave(function (e) {
+			$('#info-box').css('display', 'none');
+		});
+
+		// Info-box hovered position
+		$(document).mousemove(function (e) {
+			$('#info-box').css('top', e.pageY - $('#info-box').height() - 380);
+			$('#info-box').css('left', e.pageX - ($('#info-box').width()) / 2);
+		}).mouseover();
+
+		//var ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+		//if (ios) {
+		//	$('a').on('click touchend', function () {
+		//		var link = $(this).attr('href');
+		//		window.open(link, '_blank');
+		//		return false;
+		//	});
+		//}
+	</script>
 </body>
 
 </html>

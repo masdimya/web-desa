@@ -1063,6 +1063,8 @@ li.slick-active {
 .produk img {
   height: 200px;
 }
+
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -1107,4 +1109,32 @@ li.slick-active {
   100% {
     transform: rotate(360deg);
   }
+}
+
+
+/*--------------------------------------------------------------
+# SVG PATH HOVER
+--------------------------------------------------------------*/
+
+path:hover,
+circle:hover {
+  stroke: #161616 !important;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  fill: #a2a2a2 !important;
+  cursor: pointer;
+}
+
+#info-box {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  color: #fff;
+  background-color: #212529cb;
+  border-radius: 8px;
+  padding: 5px;
+  font-weight: 500;
+  font-size: 15px;
 }
