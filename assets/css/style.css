@@ -1138,3 +1138,12 @@ circle:hover {
   font-weight: 500;
   font-size: 15px;
 }
+
+
+/* COVID-19  */
+
+@media (max-width: 767.98px) {
+  .border-start {
+    border-left-color: #ffffff00 !important;
+  }
+}

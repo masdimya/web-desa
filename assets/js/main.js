@@ -45,7 +45,6 @@ setTimeout(function () {
   }
 }, 2000);
 
-
 (function () {
   ("use strict");
 
@@ -105,8 +104,6 @@ setTimeout(function () {
     }
   });
 
-  
-
   /**
    * Toggle .header-scrolled class to #header when page is scrolled
    */
@@ -132,4 +129,3 @@ setTimeout(function () {
     this.classList.toggle("bi-x");
   });
 })();
-
