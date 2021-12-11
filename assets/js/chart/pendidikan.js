@@ -19,8 +19,7 @@ new Chart(document.getElementById("chart-pendidikan"), {
   },
   options: {
     title: {
-      display: true,
-      text: "Pendidikan 2021",
+      display: false
     },
   },
 });
