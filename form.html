@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>🔧 Setting Nama Desa </h1>
+  <hr>
+  <p>🏕 Nama Desa Saat Ini : <b><span class="namaDesa"></span></b> </p>
+  <hr>
+  <h2 style="margin-top: 50px;">Form Update</h2>
+  <form action="https://web-desa-config.herokuapp.com/desa" method="POST">
+    <label for="name">Nama Desa</label>
+    <input type="text" id="name" name="name">
+    <button type="submit">Update Nama Desa</button>
+  </form>
+  <script src="config.js"></script>
+</body>
+</html>

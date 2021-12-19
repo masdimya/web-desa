@@ -1147,3 +1147,8 @@ circle:hover {
     border-left-color: #ffffff00 !important;
   }
 }
+
+/* Tittle Uppercase */
+.upper{
+  text-transform: uppercase;
+}
